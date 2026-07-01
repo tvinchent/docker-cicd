@@ -28,7 +28,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: "docker://${{ secrets.DOCKERHUB_USERNAME }}/mon-app:${{ steps.vars.outputs.tag }}"
+          image-ref: "${{ secrets.DOCKERHUB_USERNAME }}/mon-app:${{ steps.vars.outputs.tag }}"
           format: "table"
           severity: "CRITICAL,HIGH"
           exit-code: "1"
