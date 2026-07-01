@@ -1,4 +1,4 @@
-# Utilise l'image PHP 8.0 avec Apache
+# Utilise l'image PHP 8 avec Apache
 FROM php:8.3-fpm-alpine
 
 # Copie le code de l'application dans le répertoire par défaut d'Apache
