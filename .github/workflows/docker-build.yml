@@ -11,7 +11,7 @@ jobs:
     steps:
       # 1. Récupère le code du repo
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       # 2. Génère un tag basé sur le numéro de commit court
       - name: Set image tag
@@ -26,7 +26,7 @@ jobs:
 
       # 4. Scan de sécurité avec Trivy
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.31.0
         with:
           image-ref: "${{ secrets.DOCKERHUB_USERNAME }}/mon-app:${{ steps.vars.outputs.tag }}"
           format: "table"
